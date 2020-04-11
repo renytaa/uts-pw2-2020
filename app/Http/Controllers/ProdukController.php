@@ -31,17 +31,21 @@ class ProdukController extends Controller
                 'harga'=>35000
             ]
         ];
+        return view('depan.index',["produk"=>$produk]);
 
         //kemudian tampilkan dalam view
     }
     
     public function tambah()
     {
+        return view('depan.form');
         // tampilkan form seperti yang ada di template
     }
 
-    public function detail()
+    public function detail(request $request)
     {
+        return view('depan.success',['request'=>$request]);
+        
         // tampilkan halaman success seperti yang ada di template
     }
 }
